@@ -26,6 +26,6 @@ function DadJoke() {
       </button>
     </div>
   );
-}
+};
 
 export default DadJoke;
