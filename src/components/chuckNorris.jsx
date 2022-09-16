@@ -8,20 +8,20 @@ function ChuckNorris() {
 }, []);
 
 const getChuck = async () => {
-    const response = await fetch("https://api.chucknorris.io/jokes/random", {
+  const response = await fetch("https://api.chucknorris.io/jokes/random", {
     headers: {
-        Accept: "application/json",
-    },
-    });
-    const data = await response.json();
+      Accept: "application/json",
+   },
+  });
+  const data = await response.json();
     setChuck(data.chuck);
-    };
+  };
 
   return (
     <div className="container">
       <h1>Chuck Norris Facts</h1>
       <p className="joke">{chuck}</p>
-      <button type="button" className="btn">
+      <button type="button" className="btn" onClick={getChuck}>
         Get Another Fact
       </button>
     </div>
