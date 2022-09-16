@@ -14,7 +14,7 @@ const getChuck = async () => {
    },
   });
   const data = await response.json();
-    setChuck(data.chuck);
+    setChuck(data.value);
   };
 
   return (

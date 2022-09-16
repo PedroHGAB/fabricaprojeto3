@@ -10,18 +10,24 @@ import Navbar from "./components/navbar";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navbar />
+    element: <Navbar />,
+    children: [
+      {
+        path: "/",
+        element: <ChuckNorrisPage />,
+      },
+      {
+        path: "/dadJoke",
+        element: <DadJokePage />,
+      },
+    ],
   },
-  {
-    path: "/dadJoke",
-    element: <DadJokePage />
-  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider rounter={router}/>
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 
